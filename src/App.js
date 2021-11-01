@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
 import './App.css';
-import Loader from 'react-loader-spinner';
+import React, { Component } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import Searchbar from './components/Searchbar';
+import LogicApp from './components/LogicApp';
 
 class App extends Component {
+  state = {
+    searchImage: null,
+  };
+
+  formSubmitHandler = searchImage => {
+    this.setState({ searchImage });
+  };
+
   render() {
     return (
       <div className="App">
-        <Loader
-          type="Bars"
-          color="#00BFFF"
-          height={100}
-          width={100}
-          timeout={10000}
-        />
+        <Searchbar onSubmit={this.formSubmitHandler} />
+        <ToastContainer autoClose={3000} />
+        <LogicApp searchImage={this.state.searchImage} />
       </div>
     );
   }

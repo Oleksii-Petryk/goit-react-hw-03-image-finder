@@ -31,7 +31,7 @@
   overflow: hidden;
 }
 
-.SearchForm-button {
+.button {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -46,11 +46,11 @@
   outline: none;
 }
 
-.SearchForm-button:hover {
+.button:hover {
   opacity: 1;
 }
 
-.SearchForm-button-label {
+.label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -62,7 +62,7 @@
   border: 0;
 }
 
-.SearchForm-input {
+.input {
   display: inline-block;
   width: 100%;
   font: inherit;
@@ -73,7 +73,7 @@
   padding-right: 4px;
 }
 
-.SearchForm-input::placeholder {
+.input::placeholder {
   font: inherit;
   font-size: 18px;
 }
